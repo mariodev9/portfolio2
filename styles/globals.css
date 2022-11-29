@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
+
+@font-face {
+    font-family: "Guttie";
+    src: url('../fonts/guttie/Guttie.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{ 
+    font-family: 'Poppins', sans-serif!important;
+    font-weight: 600;
+}
+
+
+
