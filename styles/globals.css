@@ -11,7 +11,15 @@
 body{ 
     font-family: 'Poppins', sans-serif!important;
     font-weight: 600;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
+
+.section-title{
+    overflow: hidden;
+    margin-top: 15vh;
+}
 
 

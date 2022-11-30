@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Icon } from "@chakra-ui/react";
 
 const variants = {
   visible: (i) => ({
@@ -12,19 +13,18 @@ const variants = {
       delay: i * 0.25,
     },
   }),
-  hidden: { opacity: 0, y: 100, scale: 0 },
+  hidden: { opacity: 0, y: 0, scale: 0 },
 };
 
 export const HeaderImage = (props) => {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <svg
+      <Icon
         xmlns="http://www.w3.org/2000/svg"
-        width="385"
-        height="474"
+        width={{ base: "100%", tablet: "385" }}
+        height={{ base: "274", tablet: "474" }}
         viewBox="0 0 385 474"
         fill="none"
-        {...props}
       >
         <mask
           id="mask0_53_78"
@@ -194,7 +194,7 @@ export const HeaderImage = (props) => {
             xlinkHref="https://firebasestorage.googleapis.com/v0/b/codepartyv2.appspot.com/o/IMG_168.png?alt=media&token=7c326048-8d9f-4666-80bc-381dc5f5c5c9"
           ></image>
         </defs>
-      </svg>
+      </Icon>
     </motion.div>
   );
 };

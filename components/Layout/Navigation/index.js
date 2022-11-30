@@ -2,47 +2,48 @@ import {
   Box,
   Flex,
   Text,
-  IconButton,
   Button,
   Stack,
-  Collapse,
-  Icon,
-  Link,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  useColorModeValue,
-  useBreakpointValue,
   useDisclosure,
   Drawer,
   DrawerBody,
-  DrawerFooter,
-  DrawerHeader,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
   VStack,
 } from "@chakra-ui/react";
-
+import { motion } from "framer-motion";
+import Link from "next/link";
 import { Menu } from "../../Icons";
+
+const navbarVariants = {
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      duration: 1,
+    },
+  },
+  hidden: { opacity: 0, y: -20 },
+};
 
 export default function Navigation() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box>
+    <motion.div variants={navbarVariants} initial="hidden" animate="visible">
       <Flex
         display={{ base: "none", tablet: "flex" }}
-        py={{ base: 5 }}
         align={"center"}
         justify={"space-between"}
+        p={{ tablet: "20px 40px" }}
       >
         <Box>MARIODEV.</Box>
         <DesktopNav />
       </Flex>
-
       <MobileNav />
-    </Box>
+    </motion.div>
   );
 }
 
@@ -50,7 +51,9 @@ const DesktopNav = () => {
   return (
     <Stack direction={"row"} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.title}>{navItem.title}</Box>
+        <Box key={navItem.title}>
+          <Link href={navItem.url}>{navItem.title}</Link>
+        </Box>
       ))}
       <Box>github - linkedin</Box>
     </Stack>
@@ -67,10 +70,10 @@ const MobileNav = () => {
         align={"center"}
         display={{ base: "flex", tablet: "none" }}
         py={{ base: 1 }}
-        px={{ base: 2 }}
+        px={{ base: "20px" }}
       >
         <Box>MARIODEV.</Box>
-        <Button m={4} onClick={onOpen}>
+        <Button my={4} onClick={onOpen}>
           <Menu />
         </Button>
       </Flex>
@@ -83,7 +86,7 @@ const MobileNav = () => {
           <DrawerBody display={"flex"} justifyContent={"center"}>
             <VStack spacing={10} justify={"center"}>
               {NAV_ITEMS.map((navItem) => (
-                <Box key={navItem.title}>
+                <Box key={navItem.title} onClick={onClose}>
                   <Text fontSize={"42px"} fontFamily={"Guttie"}>
                     <Link href={navItem.url}>{navItem.title}</Link>
                   </Text>
@@ -99,15 +102,19 @@ const MobileNav = () => {
 
 const NAV_ITEMS = [
   {
+    title: "Inicio",
+    url: "/",
+  },
+  {
     title: "Sobre mi",
-    url: "/about",
+    url: "/About",
   },
   {
     title: "Proyectos",
-    url: "/proyects",
+    url: "/Proyects",
   },
   {
     title: "Contacto",
-    url: "/contact",
+    url: "/Contact",
   },
 ];
