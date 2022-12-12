@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Text,
-  Flex,
-  Heading,
-  Button,
-  Divider,
-  Stack,
-} from "@chakra-ui/react";
+import { Box, Text, Flex, Divider, Stack } from "@chakra-ui/react";
 import { HeaderImage } from "../components/Header/HeaderImage";
 import { motion } from "framer-motion";
 import {

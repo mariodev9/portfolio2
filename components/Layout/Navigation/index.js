@@ -38,18 +38,6 @@ export default function Navigation() {
   );
 }
 
-const DesktopNav = () => {
-  return (
-    <Stack direction={"row"} spacing={4}>
-      {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.title}>
-          <Link href={navItem.url}>{navItem.title}</Link>
-        </Box>
-      ))}
-    </Stack>
-  );
-};
-
 const MobileNav = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -67,7 +55,7 @@ const MobileNav = () => {
             <LogoIcon />
           </Link>
         </Box>
-        <Button my={4} onClick={onOpen}>
+        <Button my={4} onClick={onOpen} bg="none">
           <Menu />
         </Button>
       </Flex>
