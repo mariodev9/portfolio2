@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Menu } from "../../Icons";
+import { LogoIcon, Menu } from "../../Icons";
 
 const navbarVariants = {
   visible: {
@@ -33,15 +33,6 @@ export default function Navigation() {
 
   return (
     <motion.div variants={navbarVariants} initial="hidden" animate="visible">
-      <Flex
-        display={{ base: "none", tablet: "flex" }}
-        align={"center"}
-        justify={"space-between"}
-        p={{ tablet: "20px 40px" }}
-      >
-        <Box>MARIODEV.</Box>
-        <DesktopNav />
-      </Flex>
       <MobileNav />
     </motion.div>
   );
@@ -55,7 +46,6 @@ const DesktopNav = () => {
           <Link href={navItem.url}>{navItem.title}</Link>
         </Box>
       ))}
-      <Box>github - linkedin</Box>
     </Stack>
   );
 };
@@ -68,11 +58,15 @@ const MobileNav = () => {
       <Flex
         justify={"space-between"}
         align={"center"}
-        display={{ base: "flex", tablet: "none" }}
+        // display={{ base: "flex", tablet: "none" }}
         py={{ base: 1 }}
-        px={{ base: "20px" }}
+        px={{ base: "40px" }}
       >
-        <Box>MARIODEV.</Box>
+        <Box>
+          <Link href={"/"}>
+            <LogoIcon />
+          </Link>
+        </Box>
         <Button my={4} onClick={onOpen}>
           <Menu />
         </Button>
@@ -102,19 +96,15 @@ const MobileNav = () => {
 
 const NAV_ITEMS = [
   {
-    title: "Inicio",
-    url: "/",
-  },
-  {
-    title: "Sobre mi",
+    title: "SOBRE MI",
     url: "/About",
   },
   {
-    title: "Proyectos",
+    title: "PROYECTOS",
     url: "/Proyects",
   },
   {
-    title: "Contacto",
+    title: "CONTACTO",
     url: "/Contact",
   },
 ];

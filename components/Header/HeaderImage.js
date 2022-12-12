@@ -21,8 +21,8 @@ export const HeaderImage = (props) => {
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <Icon
         xmlns="http://www.w3.org/2000/svg"
-        width={{ base: "100%", tablet: "385" }}
-        height={{ base: "274", tablet: "474" }}
+        width={{ base: "100%", tablet: "300" }}
+        height={{ base: "274", tablet: "400" }}
         viewBox="0 0 385 474"
         fill="none"
       >
