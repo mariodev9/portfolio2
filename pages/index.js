@@ -10,7 +10,12 @@ import {
 } from "@chakra-ui/react";
 import { HeaderImage } from "../components/Header/HeaderImage";
 import { motion } from "framer-motion";
-import { ArrowIcon, GithubIcon, LinkedinIcon } from "../components/Icons";
+import {
+  ArrowIcon,
+  GithubIcon,
+  LinkedinIcon,
+  RotateIcon,
+} from "../components/Icons";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -97,6 +102,9 @@ export default function Index() {
             align="center"
             justify={"center"}
           >
+            <Box pos={"absolute"} top="0px" right={"12%"}>
+              <RotateIcon />
+            </Box>
             <Box display={{ base: "none", tablet: "flex" }}>
               <HeaderImage />
             </Box>
