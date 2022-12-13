@@ -3,21 +3,40 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
+// Cambia de color para la pagina "/About"
 export const Menu = () => {
+  const router = useRouter();
+  const ruta = router.route === "/About" && true;
   return (
-    <svg
+    <motion.svg
       xmlns="http://www.w3.org/2000/svg"
       width="20"
       height="11"
       viewBox="0 0 20 11"
       fill="none"
+      stroke={ruta ? "white" : "black"}
     >
-      <path d="M19 1H1" stroke="black" strokeWidth="2" strokeLinecap="round" />
+      <path d="M19 1H1" strokeWidth="2" strokeLinecap="round" />
+      <path d="M6 10L19 10" strokeWidth="2" strokeLinecap="round" />
+    </motion.svg>
+  );
+};
+
+// Cambia de color para la pagina "/About"
+export const LogoIcon = () => {
+  const router = useRouter();
+  const ruta = router.route === "/About" && true;
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="53"
+      height="60"
+      viewBox="0 0 53 60"
+      fill="none"
+    >
       <path
-        d="M6 10L19 10"
-        stroke="black"
-        strokeWidth="2"
-        strokeLinecap="round"
+        d="M32.28 16.2V44H27.72V24.96L19.24 44H16.08L7.56 24.96V44H3V16.2H7.92L17.68 38L27.4 16.2H32.28ZM44.3134 44.28C43.4868 44.28 42.7934 44 42.2334 43.44C41.6734 42.88 41.3934 42.1867 41.3934 41.36C41.3934 40.5333 41.6734 39.84 42.2334 39.28C42.7934 38.72 43.4868 38.44 44.3134 38.44C45.1134 38.44 45.7934 38.72 46.3534 39.28C46.9134 39.84 47.1934 40.5333 47.1934 41.36C47.1934 42.1867 46.9134 42.88 46.3534 43.44C45.7934 44 45.1134 44.28 44.3134 44.28Z"
+        fill={ruta ? "white" : "black"}
       />
     </svg>
   );
@@ -63,9 +82,10 @@ export const LinkedinIcon = () => {
   );
 };
 
-export const ArrowIcon = () => {
+export const ArrowIcon = ({ isHovered }) => {
   return (
-    <svg
+    <motion.svg
+      animate={{ rotate: isHovered ? -53 : 0 }}
       xmlns="http://www.w3.org/2000/svg"
       width="30"
       height="34"
@@ -76,24 +96,7 @@ export const ArrowIcon = () => {
         d="M24.5301 33.2952C25.6261 33.4326 26.626 32.6556 26.7634 31.5596L29.003 13.6994C29.1404 12.6035 28.3634 11.6036 27.2674 11.4661C26.1714 11.3287 25.1715 12.1058 25.0341 13.2018L23.0433 29.0774L7.16766 27.0867C6.07168 26.9493 5.0718 27.7263 4.93436 28.8223C4.79693 29.9183 5.574 30.9182 6.66998 31.0556L24.5301 33.2952ZM0.420818 3.22727L23.1998 32.538L26.3581 30.0835L3.57918 0.772733L0.420818 3.22727Z"
         fill="black"
       />
-    </svg>
-  );
-};
-
-export const LogoIcon = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="53"
-      height="60"
-      viewBox="0 0 53 60"
-      fill="none"
-    >
-      <path
-        d="M32.28 16.2V44H27.72V24.96L19.24 44H16.08L7.56 24.96V44H3V16.2H7.92L17.68 38L27.4 16.2H32.28ZM44.3134 44.28C43.4868 44.28 42.7934 44 42.2334 43.44C41.6734 42.88 41.3934 42.1867 41.3934 41.36C41.3934 40.5333 41.6734 39.84 42.2334 39.28C42.7934 38.72 43.4868 38.44 44.3134 38.44C45.1134 38.44 45.7934 38.72 46.3534 39.28C46.9134 39.84 47.1934 40.5333 47.1934 41.36C47.1934 42.1867 46.9134 42.88 46.3534 43.44C45.7934 44 45.1134 44.28 44.3134 44.28Z"
-        fill="black"
-      />
-    </svg>
+    </motion.svg>
   );
 };
 
@@ -109,8 +112,8 @@ export const RotateIcon = () => {
   return (
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"
-      width="156"
-      height="156"
+      width="136"
+      height="136"
       viewBox="0 0 196 196"
       fill="none"
       onMouseEnter={() => setHovered(true)}

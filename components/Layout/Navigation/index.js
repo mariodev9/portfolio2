@@ -14,6 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { LogoIcon, Menu } from "../../Icons";
 
 const navbarVariants = {
@@ -29,10 +30,18 @@ const navbarVariants = {
 };
 
 export default function Navigation() {
-  const { isOpen, onToggle } = useDisclosure();
-
   return (
-    <motion.div variants={navbarVariants} initial="hidden" animate="visible">
+    <motion.div
+      variants={navbarVariants}
+      initial="hidden"
+      animate="visible"
+      style={{
+        // backgroundColor: "blue",
+        position: "absolute",
+        zIndex: 3,
+        width: "100%",
+      }}
+    >
       <MobileNav />
     </motion.div>
   );
@@ -40,6 +49,7 @@ export default function Navigation() {
 
 const MobileNav = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const router = useRouter();
 
   return (
     <>
@@ -55,7 +65,7 @@ const MobileNav = () => {
             <LogoIcon />
           </Link>
         </Box>
-        <Button my={4} onClick={onOpen} bg="none">
+        <Button my={4} onClick={onOpen} bg="none" _hover={{ bg: "none" }}>
           <Menu />
         </Button>
       </Flex>

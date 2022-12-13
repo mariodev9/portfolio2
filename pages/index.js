@@ -10,6 +10,7 @@ import {
 } from "../components/Icons";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import ProjectsButton from "../components/Header/ProjectsButton";
 
 const headerVariants = {
   visible: {
@@ -32,8 +33,6 @@ export default function Index() {
           position: "absolute",
           height: "100vh",
           width: "100%",
-
-          // backgroundColor: "green",
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -45,7 +44,7 @@ export default function Index() {
       >
         <Flex
           direction={{ base: "column", tablet: "row" }}
-          p={{ base: "10vh 10px", tablet: "10vh 120px" }}
+          p={{ base: "25vh 10px", tablet: "20vh 120px" }}
           justify={"center"}
         >
           <motion.div
@@ -75,26 +74,18 @@ export default function Index() {
               Desarrollador Front-end que disfruta de diseñar y plasmar ideas
               creativas en la web.
             </Text>
-            <Flex
-              justify={{ base: "center", tablet: "flex-start" }}
-              mt="50px"
-              onClick={() => router.push("/Proyects")}
-            >
-              <Flex width="200px" align={"center"} cursor={"pointer"}>
-                <ArrowIcon />
-                <Box p="0px 20px" fontSize={"22px"}>
-                  <Text textTransform={"uppercase"}>Ver </Text>
-                  <Text textTransform={"uppercase"}> Proyectos</Text>
-                </Box>
-              </Flex>
-            </Flex>
+            <ProjectsButton />
           </motion.div>
           <Flex
             width={{ base: "100%", tablet: "50vw" }}
             align="center"
             justify={"center"}
           >
-            <Box pos={"absolute"} top="0px" right={"12%"}>
+            <Box
+              pos={"absolute"}
+              top={{ base: "20vh", tablet: "60px" }}
+              right={{ base: "0px", tablet: "12%" }}
+            >
               <RotateIcon />
             </Box>
             <Box display={{ base: "none", tablet: "flex" }}>
@@ -107,8 +98,8 @@ export default function Index() {
           pos={"absolute"}
           justify="center"
           align={"center"}
-          bottom="60px"
-          left={"30px"}
+          bottom="0px"
+          left={"35px"}
           h="180px"
           display={{ base: "none", tablet: "flex" }}
         >

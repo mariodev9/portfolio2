@@ -46,6 +46,11 @@ export const theme = extendTheme({
       borderRadius: "20px",
       boxShadow: "0 5px 5px rgba(0, 0, 0, 0.1)",
     },
+    skill: {
+      p: "5px 25px",
+      border: "2px solid white",
+      borderRadius: "25px",
+    },
   },
   // COMPONENTES
   components: {
