@@ -25,27 +25,15 @@ export const theme = extendTheme({
   },
   // COLORES
   colors: {
-    brand: {
-      100: "#159BFF",
+    background: {
+      100: "#FFFDF5",
     },
     black: {
-      50: "#1B1B27",
-      100: "#0C0C12",
-      200: "#10101A",
-    },
-    gray: {
-      100: "#848484",
-      200: "#354259",
+      100: "#10101A",
     },
   },
   // LAYER
   layerStyles: {
-    primaryBox: {
-      bg: "black.50",
-      borderColor: "gray.500",
-      borderRadius: "20px",
-      boxShadow: "0 5px 5px rgba(0, 0, 0, 0.1)",
-    },
     skill: {
       p: "5px 25px",
       border: "2px solid white",

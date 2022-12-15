@@ -36,7 +36,6 @@ export default function Navigation() {
       initial="hidden"
       animate="visible"
       style={{
-        // backgroundColor: "blue",
         position: "absolute",
         zIndex: 3,
         width: "100%",
@@ -79,7 +78,7 @@ const MobileNav = () => {
             <VStack spacing={10} justify={"center"}>
               {NAV_ITEMS.map((navItem) => (
                 <Box key={navItem.title} onClick={onClose}>
-                  <Text fontSize={"42px"} fontFamily={"Guttie"}>
+                  <Text fontSize={"42px"} fontFamily={"Segoe Print"}>
                     <Link href={navItem.url}>{navItem.title}</Link>
                   </Text>
                 </Box>

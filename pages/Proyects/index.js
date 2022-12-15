@@ -25,7 +25,8 @@ export default function Proyects() {
             duration: 0.5,
             delay: 0.5,
           }}
-          fontFamily={"Guttie, sans serif"}
+          fontFamily={"Segoe Print, sans serif"}
+          // fontFamily={"Guttie, sans serif"}
           fontSize={"100px"}
         >
           Proyectos
