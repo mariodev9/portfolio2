@@ -3,10 +3,7 @@ import { motion } from "framer-motion";
 import { Heading, Box, Text, Flex } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import Tecnologies from "../../components/About/Tecnologies";
-import interfaces from "../../public/interfaces.jpg";
-import codeparty from "../../public/codepartyScreen.jpg";
-
-import Image from "next/image";
+import Interfaces from "../../components/About/Interfaces";
 
 const MotionHeading = motion(Heading);
 
@@ -29,7 +26,7 @@ export default function Index() {
         ease: "easeInOut",
       }}
     >
-      <Box p={{ base: "20vh 40px", tablet: "30vh 120px" }}>
+      <Box p={{ base: "20vh 40px", tablet: "25vh 120px" }}>
         <motion.div>
           <MotionHeading
             as="h1"
@@ -66,13 +63,7 @@ export default function Index() {
         </Flex>
 
         <Tecnologies />
-
-        <Text align={"center"}>
-          Ademas de desarrollar, disfruto de crear interfaces divertidas
-        </Text>
-
-        <Image src={interfaces} />
-        <Image src={codeparty} />
+        <Interfaces />
       </Box>
     </motion.div>
   );

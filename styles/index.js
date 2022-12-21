@@ -37,7 +37,7 @@ export const theme = extendTheme({
     skill: {
       p: "5px 25px",
       border: "2px solid white",
-      borderRadius: "25px",
+      borderRadius: "15px",
     },
   },
   // COMPONENTES

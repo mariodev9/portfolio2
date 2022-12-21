@@ -12,9 +12,10 @@ import {
   DrawerCloseButton,
   VStack,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useViewportScroll } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 import { LogoIcon, Menu } from "../../Icons";
 
 const navbarVariants = {

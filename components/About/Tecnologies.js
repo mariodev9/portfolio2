@@ -61,7 +61,7 @@ export default function Tecnologies() {
           viewport={{ once: true }}
         >
           {tecnologiesList.map((item) => (
-            <motion.div variants={skill} key={skill}>
+            <motion.div variants={skill} key={item}>
               <Box layerStyle={"skill"}>{item}</Box>
             </motion.div>
           ))}
