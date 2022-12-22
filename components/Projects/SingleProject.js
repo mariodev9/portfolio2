@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { Box, Flex, GridItem, Icon, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  GridItem,
+  Icon,
+  Text,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import { CodepartyIcon, GithubIcon, SiteIcon } from "../Icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -13,6 +20,7 @@ export default function SingleProject({
   urlSite,
 }) {
   const [isHovered, setHovered] = useState(false);
+  const [isLargerThan900] = useMediaQuery("(max-width: 900px)");
 
   const MotionFlex = motion(Flex);
 
@@ -33,8 +41,9 @@ export default function SingleProject({
         bg={backgroundColor}
         boxShadow="0px 5px 4px #00000012"
         cursor="pointer"
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
+        onMouseEnter={() => !isLargerThan900 && setHovered(true)}
+        onMouseLeave={() => !isLargerThan900 && setHovered(false)}
+        onTap={() => isLargerThan900 && setHovered(!isHovered)}
       >
         <motion.div
           animate={{ scale: isHovered ? 1 : 0 }}
@@ -43,11 +52,15 @@ export default function SingleProject({
         >
           <Flex gap="10">
             {/* agregar que si bg === #272727 se ponga blanco los icons */}
-            <Link href={urlGithub}>
-              <GithubIcon />
+            <Link href={urlGithub} target="_blank">
+              <GithubIcon
+                stroke={backgroundColor === "#272727" ? "#fff" : "#151515"}
+              />
             </Link>
-            <Link href={urlSite}>
-              <SiteIcon />
+            <Link href={urlSite} target="_blank">
+              <SiteIcon
+                stroke={backgroundColor === "#272727" ? "#fff" : "#151515"}
+              />
             </Link>
           </Flex>
         </motion.div>

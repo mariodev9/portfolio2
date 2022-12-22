@@ -8,22 +8,22 @@ const list = [
     name: "Codeparty",
     icon: <CodepartyIcon />,
     backgroundColor: "#272727",
-    urlGithub: "",
+    urlGithub: "https://github.com/mariodev9/CodepartyV2",
     urlSite: "https://codeparty-v2.vercel.app/Home",
   },
   {
     name: "Flashcards",
     icon: <FlashcardsIcon />,
     backgroundColor: "#fff",
-    urlGithub: "",
+    urlGithub: "https://github.com/frontendcafe/air-flashcards",
     urlSite: "",
   },
   {
     name: "8bitstore",
     icon: <BitstoreIcon />,
     backgroundColor: "#fff",
-    urlGithub: "",
-    urlSite: "",
+    urlGithub: "https://github.com/mariodev9/8bitStore",
+    urlSite: "https://8bit-store.vercel.app/",
   },
 ];
 

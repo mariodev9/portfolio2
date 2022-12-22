@@ -40,6 +40,8 @@ export default function Navigation() {
         position: "absolute",
         zIndex: 3,
         width: "100%",
+        background: "rgba( 255, 255, 255, 0.1 )",
+        backdropFilter: "blur( 7px )",
       }}
     >
       <MobileNav />
@@ -53,13 +55,7 @@ const MobileNav = () => {
 
   return (
     <>
-      <Flex
-        justify={"space-between"}
-        align={"center"}
-        // display={{ base: "flex", tablet: "none" }}
-        py={{ base: 1 }}
-        px={{ base: "40px" }}
-      >
+      <Flex justify={"space-between"} align={"center"} py="2px" px="40px">
         <Box>
           <Link href={"/"}>
             <LogoIcon />

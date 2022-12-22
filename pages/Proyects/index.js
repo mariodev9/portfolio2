@@ -50,15 +50,6 @@ export default function Proyects() {
           </MotionHeading>
         </motion.div>
 
-        {/* <motion.div
-          style={{
-            scale: scaleAnim,
-            backgroundColor: "red",
-            width: "30px",
-            height: "30px",
-          }}
-        ></motion.div> */}
-
         <ProjectsList />
 
         <OtherProjects />
