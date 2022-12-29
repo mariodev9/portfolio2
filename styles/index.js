@@ -5,7 +5,7 @@ export const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: "#FFFDF5",
+        bg: "#FFF7F0",
         color: "#000",
       },
       fonts: {
@@ -27,6 +27,7 @@ export const theme = extendTheme({
   colors: {
     background: {
       100: "#FFFDF5",
+      200: "#FFF7F0",
     },
     black: {
       100: "#10101A",
@@ -38,6 +39,13 @@ export const theme = extendTheme({
       p: "5px 25px",
       border: "2px solid white",
       borderRadius: "15px",
+      color: "black",
+      bgColor: "#FFFFFF",
+    },
+    whiteBox: {
+      boxShadow: "0px 5px 4px #00000012",
+      bgColor: "#FFFFFF",
+      borderRadius: "20px",
     },
   },
   // COMPONENTES
@@ -51,10 +59,7 @@ export const theme = extendTheme({
         //   bg: props.colorMode === "dark" ? "red.300" : "red.500",
         // }),
         // 5. We can add responsive variants
-        sm: {
-          bg: "teal.500",
-          fontSize: "md",
-        },
+
         primary: {
           bg: "brand.100",
           fontSize: "md",
