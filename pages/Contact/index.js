@@ -1,11 +1,27 @@
-import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  shouldForwardProp,
+  Text,
+} from "@chakra-ui/react";
+import {
+  isValidMotionProp,
+  motion,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import React from "react";
 import { GithubIcon, LinkedinIcon } from "../../components/Icons";
+import { chakra } from "@chakra-ui/react";
+import PrimaryButton from "../../components/Common/PrimaryButton";
 
 export default function ContactPage() {
-  const { scrollYProgress } = useScroll();
-  const scaleAnim = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.2, 0.8]);
+  const MotionButton = chakra(motion.button, {
+    shouldForwardProp: (prop) =>
+      isValidMotionProp(prop) || shouldForwardProp(prop),
+  });
 
   return (
     <motion.div
@@ -28,15 +44,9 @@ export default function ContactPage() {
         justify="center"
         direction="column"
       >
-        <Heading
-          as="h1"
-          fontFamily={"Guttie, sans serif"}
-          size="4xl"
-          textAlign={"center"}
-          pb="40px"
-        >
+        <Text textAlign={"center"} pb="40px" variant={"title"}>
           Contacto
-        </Heading>
+        </Text>
         <Flex justify={"center"}>
           <Text textAlign={"center"} w="90%">
             Mi bandeja de entrada siempre esta abierta para cualquier consulta
@@ -44,22 +54,35 @@ export default function ContactPage() {
           </Text>
         </Flex>
         <Flex justify={"center"} mt="50px">
-          <Button layerStyle={"whiteBox"} w="220px" fontSize="20px" p="25px ">
+          {/* <Button
+            layerStyle={"whiteBox"}
+            fontWeight={600}
+            w="220px"
+            fontSize="20px"
+            p="25px "
+          >
             Hablemos
-          </Button>
+          </Button> */}
+          {/* <MotionButton
+            layerStyle={"whiteBox"}
+            fontWeight={600}
+            w="220px"
+            fontSize="20px"
+            p="25px "
+            whileHover={{ scale: 0.9 }}
+          >
+            Hablemos
+          </MotionButton> */}
+          <PrimaryButton width={"220px"}>Hablemos</PrimaryButton>
         </Flex>
         <Box p="20px 0px">
           <Flex justify={"center"} gap="10px">
-            <Button layerStyle={"whiteBox"} w="105px">
+            <PrimaryButton>
               <GithubIcon />
-            </Button>
-            <Button
-              layerStyle={"whiteBox"}
-              w="105px"
-              _hover={{ bgColor: "none" }}
-            >
+            </PrimaryButton>
+            <PrimaryButton>
               <LinkedinIcon />
-            </Button>
+            </PrimaryButton>
           </Flex>
         </Box>
       </Flex>

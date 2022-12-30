@@ -36,9 +36,8 @@ export const theme = extendTheme({
   // LAYER
   layerStyles: {
     skill: {
-      p: "5px 25px",
-      border: "2px solid white",
-      borderRadius: "15px",
+      p: "12px 27px",
+      borderRadius: "12px",
       color: "black",
       bgColor: "#FFFFFF",
     },
@@ -67,6 +66,16 @@ export const theme = extendTheme({
           _hover: {
             bg: "#3ba0f9",
           },
+        },
+      },
+    },
+    Text: {
+      variants: {
+        title: {
+          fontFamily: "Poppins, sans serif",
+          fontSize: "80px",
+          fontWeight: "black",
+          fontStyle: "italic",
         },
       },
     },

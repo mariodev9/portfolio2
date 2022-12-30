@@ -35,7 +35,7 @@ export default function Proyects() {
     >
       <Box p={{ base: "20vh 40px", tablet: "25vh 120px" }}>
         <motion.div>
-          <MotionHeading
+          {/* <MotionHeading
             as="h1"
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
@@ -43,11 +43,12 @@ export default function Proyects() {
               duration: 0.5,
               delay: 0.5,
             }}
-            fontFamily={"Guttie, sans serif"}
+            variant={"title"}
             size="4xl"
           >
             Proyectos
-          </MotionHeading>
+          </MotionHeading> */}
+          <Text variant={"title"}>Proyectos</Text>
         </motion.div>
 
         <ProjectsList />

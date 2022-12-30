@@ -73,8 +73,7 @@ export default function Index() {
               </Text>
               <Text
                 textAlign={{ base: "center", tablet: "initial" }}
-                fontFamily={"Segoe Print, sans serif"}
-                fontSize="80px"
+                variant={"title"}
               >
                 Mario
               </Text>
@@ -97,7 +96,7 @@ export default function Index() {
             >
               <Box
                 pos={"absolute"}
-                top={{ base: "20vh", tablet: "60px" }}
+                top={{ base: "20vh", tablet: "90px" }}
                 right={{ base: "0px", tablet: "12%" }}
               >
                 <motion.div

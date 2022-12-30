@@ -16,6 +16,7 @@ import { motion, useScroll, useViewportScroll } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import PrimaryButton from "../../Common/PrimaryButton";
 import { LogoIcon, Menu } from "../../Icons";
 
 const navbarVariants = {
@@ -40,7 +41,7 @@ export default function Navigation() {
         position: "absolute",
         zIndex: 3,
         width: "100%",
-        background: "rgba( 255, 255, 255, 0.1 )",
+        background: "rgba( 255, 255, 255, 0 )",
         backdropFilter: "blur( 7px )",
       }}
     >
@@ -55,10 +56,13 @@ const MobileNav = () => {
 
   return (
     <>
-      <Flex justify={"space-between"} align={"center"} py="2px" px="40px">
+      <Flex justify={"space-between"} align={"center"} py="10px" px="40px">
         <Box>
           <Link href={"/"}>
-            <LogoIcon />
+            {/* <LogoIcon /> */}
+            <PrimaryButton padding={"8px 23px"}>
+              <Text>M</Text>
+            </PrimaryButton>
           </Link>
         </Box>
         <Button my={4} onClick={onOpen} bg="none" _hover={{ bg: "none" }}>
@@ -75,7 +79,7 @@ const MobileNav = () => {
             <VStack spacing={10} justify={"center"}>
               {NAV_ITEMS.map((navItem) => (
                 <Box key={navItem.title} onClick={onClose}>
-                  <Text fontSize={"42px"} fontFamily={"Segoe Print"}>
+                  <Text variant={"title"} fontSize={"42px"}>
                     <Link href={navItem.url}>{navItem.title}</Link>
                   </Text>
                 </Box>

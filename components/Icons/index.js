@@ -83,6 +83,29 @@ export const LogoLoader = (props) => {
           fill={ruta ? "white" : "black"}
         />
       </motion.svg>
+      {/* <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="50"
+        height="50"
+        viewBox="0 0 90 86"
+        fill="none"
+      >
+        <rect
+          x="3"
+          y="3"
+          width="84"
+          height="80"
+          rx="8"
+          stroke="black"
+          stroke-opacity="0.86"
+          stroke-width="6"
+        />
+        <rect width="90" height="86" rx="11" fill="#141414" />
+        <path
+          d="M27.5 74H12L20.5 13H36L45 42L61 13H77L68.5 74H53L57.5 44.5L47 64.5H36L31 44.5L27.5 74Z"
+          fill="#F5F5F5"
+        />
+      </svg> */}
     </>
   );
 };
@@ -93,7 +116,44 @@ export const LogoIcon = (props) => {
 
   return (
     <>
-      <svg
+      {/* <motion.svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="50"
+        height="50"
+        viewBox="0 0 105 97"
+        fill="none"
+      >
+        <motion.rect
+          x="3"
+          y="3"
+          width="84"
+          height="80"
+          rx="8"
+          initial={{ stroke: ruta ? "black" : "white" }}
+          animate={{ stroke: ruta ? "white" : "black" }}
+          transition={{ duration: 1 }}
+          // stroke={ruta ? "white" : "black"}
+          strokeWidth="6"
+        />
+        <motion.rect
+          x="15"
+          y="11"
+          width="90"
+          height="86"
+          rx="11"
+          initial={{ fill: ruta ? "black" : "white" }}
+          animate={{ fill: ruta ? "white" : "black" }}
+          transition={{ duration: 1 }}
+        />
+        <motion.path
+          d="M42.5 85H27L35.5 24H51L60 53L76 24H92L83.5 85H68L72.5 55.5L62 75.5H51L46 55.5L42.5 85Z"
+          initial={{ fill: ruta ? "white" : "black", scale: 0.5 }}
+          animate={{ fill: ruta ? "black" : "#FFF7F0", scale: 1 }}
+          transition={{ duration: 1 }}
+          // fill={ruta ? "black" : "white"}
+        />
+      </motion.svg> */}
+      {/* <svg
         xmlns="http://www.w3.org/2000/svg"
         width="50"
         height="50"
@@ -111,6 +171,57 @@ export const LogoIcon = (props) => {
           d="M21.5908 21.2041C20.6826 21.2236 18.7393 23.9141 15.7607 29.2754C14.7549 31.082 14.1689 32.0684 14.0029 32.2344C13.8369 32.3906 13.5293 32.5322 13.0801 32.6592C12.6406 32.7861 12.2744 32.8496 11.9814 32.8496C11.3271 32.8496 11 31.5752 11 29.0264C11 27.5908 11.3076 24.9932 11.9229 21.2334C12.1768 19.71 12.3037 18.6211 12.3037 17.9668C12.3037 17.3223 12.5918 17 13.168 17C14.252 17 14.7939 17.7812 14.7939 19.3438C14.7939 20.0762 14.6133 21.5117 14.252 23.6504C13.832 26.0918 13.6172 27.5762 13.6074 28.1035C14.2129 27.5176 15.1016 26.2334 16.2734 24.251C17.9336 21.5361 19.1543 19.8174 19.9355 19.0947C20.7266 18.3623 21.542 17.9961 22.3818 17.9961C23.0166 17.9961 23.5195 18.4209 23.8906 19.2705C24.2715 20.1201 24.501 22.1465 24.5791 25.3496C24.5986 26.1504 24.6719 26.7461 24.7988 27.1367C24.9258 27.5273 25.0186 27.7227 25.0771 27.7227C25.5361 27.7227 26.5322 26.1602 28.0654 23.0352C28.8857 21.3848 29.6816 20.1299 30.4531 19.2705C31.2344 18.4111 32.0986 17.9814 33.0459 17.9814C33.8369 17.9814 34.4131 18.3916 34.7744 19.2119C35.1357 20.0225 35.3945 21.2285 35.5508 22.8301C35.6973 24.4512 35.9219 25.9355 36.2246 27.2832C36.5371 28.6309 37.1035 29.4951 37.9238 29.876C38.4805 30.1396 38.7588 30.4473 38.7588 30.7988C38.7588 31.1406 38.5244 31.4922 38.0557 31.8535C37.5869 32.2148 37.1572 32.3955 36.7666 32.3955C35.9854 32.3955 35.2871 31.917 34.6719 30.96C34.0566 30.0029 33.5928 27.9326 33.2803 24.749C33.1436 23.4697 33.0117 22.5615 32.8848 22.0244C32.7578 21.4873 32.5576 21.2188 32.2842 21.2188C31.874 21.2188 31.3857 21.6094 30.8193 22.3906C30.2627 23.1719 29.3594 24.7588 28.1094 27.1514C27.1328 29.0166 26.3906 30.2617 25.8828 30.8867C25.3848 31.502 24.9014 31.8096 24.4326 31.8096C24.0127 31.8096 23.6367 31.6436 23.3047 31.3115C22.9727 30.9697 22.7627 30.5645 22.6748 30.0957C22.5869 29.6172 22.4941 28.4502 22.3965 26.5947C22.25 23.5088 21.9814 21.7119 21.5908 21.2041Z"
           fill={ruta ? "white" : "black"}
         />
+      </svg> */}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="50"
+        height="55"
+        viewBox="0 0 50 55"
+        fill="none"
+      >
+        <g filter="url(#filter0_d_247_115)">
+          <rect width="50" height="50" rx="5" fill="white" />
+        </g>
+        <path
+          d="M18.1986 39.3506H11.7925L15.3055 10.8247H21.7116L25.4313 24.3862L32.0441 10.8247H38.6568L35.1438 39.3506H28.7377L30.5975 25.5553L26.2579 34.908H21.7116L19.6451 25.5553L18.1986 39.3506Z"
+          fill="#1E1E1E"
+        />
+        <defs>
+          <filter
+            id="filter0_d_247_115"
+            x="0"
+            y="0"
+            width="50"
+            height="55"
+            filterUnits="userSpaceOnUse"
+            colorInterpolationFilters="sRGB"
+          >
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
+            <feColorMatrix
+              in="SourceAlpha"
+              type="matrix"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha"
+            />
+            <feOffset dy="5" />
+            <feComposite in2="hardAlpha" operator="out" />
+            <feColorMatrix
+              type="matrix"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+            />
+            <feBlend
+              mode="normal"
+              in2="BackgroundImageFix"
+              result="effect1_dropShadow_247_115"
+            />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="effect1_dropShadow_247_115"
+              result="shape"
+            />
+          </filter>
+        </defs>
       </svg>
     </>
   );
@@ -221,7 +332,7 @@ export const RotateIcon = () => {
         cy="97.5"
         rx="78.5"
         ry="79.5"
-        fill="#FFFDF5"
+        fill="#FFF7F0"
         onTap={() => goToAboutPage()}
       />
       {/* icono de mano */}
@@ -1284,8 +1395,8 @@ export const PokeappIcon = () => {
           y2="26.1104"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#1B3064" />
-          <stop offset="1" stop-color="#016DB2" />
+          <stop stopColor="#1B3064" />
+          <stop offset="1" stopColor="#016DB2" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_35_41"
@@ -1295,8 +1406,8 @@ export const PokeappIcon = () => {
           y2="42.463"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.0940656" stop-color="#1D2C5E" />
-          <stop offset="1" stop-color="#1D4C89" />
+          <stop offset="0.0940656" stopColor="#1D2C5E" />
+          <stop offset="1" stopColor="#1D4C89" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_35_41"
@@ -1306,8 +1417,8 @@ export const PokeappIcon = () => {
           y2="40.5939"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.0940656" stop-color="#1D2C5E" />
-          <stop offset="1" stop-color="#1D4C89" />
+          <stop offset="0.0940656" stopColor="#1D2C5E" />
+          <stop offset="1" stopColor="#1D4C89" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_35_41"
@@ -1317,8 +1428,8 @@ export const PokeappIcon = () => {
           y2="63"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#135492" />
-          <stop offset="1" stop-color="#1D2C5E" />
+          <stop stopColor="#135492" />
+          <stop offset="1" stopColor="#1D2C5E" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_35_41"
@@ -1328,8 +1439,8 @@ export const PokeappIcon = () => {
           y2="63"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#1C2D60" />
-          <stop offset="1" stop-color="#006FB4" />
+          <stop stopColor="#1C2D60" />
+          <stop offset="1" stopColor="#006FB4" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_35_41"
@@ -1339,8 +1450,8 @@ export const PokeappIcon = () => {
           y2="56.0835"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#174882" stop-opacity="0.9" />
-          <stop offset="1" stop-color="#1D2C5E" />
+          <stop stopColor="#174882" stopOpacity="0.9" />
+          <stop offset="1" stopColor="#1D2C5E" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_35_41"
@@ -1350,8 +1461,8 @@ export const PokeappIcon = () => {
           y2="14.9677"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#1D2D5F" />
-          <stop offset="0.923023" stop-color="#0369AD" />
+          <stop stopColor="#1D2D5F" />
+          <stop offset="0.923023" stopColor="#0369AD" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_35_41"
@@ -1361,8 +1472,8 @@ export const PokeappIcon = () => {
           y2="47.0627"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#3667A5" />
-          <stop offset="1" stop-color="#1F2D4B" />
+          <stop stopColor="#3667A5" />
+          <stop offset="1" stopColor="#1F2D4B" />
         </linearGradient>
       </defs>
     </svg>

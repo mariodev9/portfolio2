@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import Tecnologies from "../../components/About/Tecnologies";
 import Interfaces from "../../components/About/Interfaces";
 
-const MotionHeading = motion(Heading);
+const MotionTitle = motion(Text);
 
 export default function Index() {
   return (
@@ -28,19 +28,18 @@ export default function Index() {
     >
       <Box p={{ base: "20vh 40px", tablet: "25vh 120px" }}>
         <motion.div>
-          <MotionHeading
+          <MotionTitle
             as="h1"
-            initial={{ y: "100%" }}
-            animate={{ y: 0 }}
+            initial={{ y: 100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
             transition={{
-              duration: 0.5,
+              duration: 1,
               delay: 0.5,
             }}
-            fontFamily={"Guttie, sans serif"}
-            size="4xl"
+            variant={"title"}
           >
             Sobre mi
-          </MotionHeading>
+          </MotionTitle>
         </motion.div>
         {/* Texto */}
         <Flex justify={"center"} pl={{ base: 0, tablet: "120px" }}>
