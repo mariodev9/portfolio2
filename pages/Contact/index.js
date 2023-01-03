@@ -33,7 +33,7 @@ export default function ContactPage() {
       }}
       initial={{ y: "100%" }}
       animate={{ y: "0%" }}
-      exit={{ opacity: 0 }}
+      exit={{ x: 2000 }}
       transition={{
         duration: 0.75,
         ease: "easeInOut",
@@ -44,7 +44,12 @@ export default function ContactPage() {
         justify="center"
         direction="column"
       >
-        <Text textAlign={"center"} pb="40px" variant={"title"}>
+        <Text
+          textAlign={"center"}
+          pb="40px"
+          variant={"title"}
+          fontSize={{ base: "55px", tablet: "80px" }}
+        >
           Contacto
         </Text>
         <Flex justify={"center"}>

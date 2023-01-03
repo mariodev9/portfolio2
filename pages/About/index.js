@@ -20,7 +20,7 @@ export default function Index() {
       }}
       initial={{ y: "100%" }}
       animate={{ y: "0%" }}
-      exit={{ opacity: 0 }}
+      exit={{ y: 2000 }}
       transition={{
         duration: 0.75,
         ease: "easeInOut",
@@ -37,6 +37,7 @@ export default function Index() {
               delay: 0.5,
             }}
             variant={"title"}
+            fontSize={{ base: "55px", tablet: "80px" }}
           >
             Sobre mi
           </MotionTitle>

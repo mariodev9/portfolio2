@@ -61,7 +61,9 @@ const MobileNav = () => {
           <Link href={"/"}>
             {/* <LogoIcon /> */}
             <PrimaryButton padding={"8px 23px"}>
-              <Text>M</Text>
+              <Text fontWeight={"black"} fontStyle={"italic"}>
+                M
+              </Text>
             </PrimaryButton>
           </Link>
         </Box>

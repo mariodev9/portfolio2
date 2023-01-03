@@ -27,7 +27,7 @@ export default function Proyects() {
       }}
       initial={{ y: "100%" }}
       animate={{ y: "0%" }}
-      exit={{ opacity: 0 }}
+      exit={{ x: 2000 }}
       transition={{
         duration: 0.75,
         ease: "easeInOut",
@@ -35,20 +35,9 @@ export default function Proyects() {
     >
       <Box p={{ base: "20vh 40px", tablet: "25vh 120px" }}>
         <motion.div>
-          {/* <MotionHeading
-            as="h1"
-            initial={{ y: "100%" }}
-            animate={{ y: 0 }}
-            transition={{
-              duration: 0.5,
-              delay: 0.5,
-            }}
-            variant={"title"}
-            size="4xl"
-          >
+          <Text variant={"title"} fontSize={{ base: "55px", tablet: "80px" }}>
             Proyectos
-          </MotionHeading> */}
-          <Text variant={"title"}>Proyectos</Text>
+          </Text>
         </motion.div>
 
         <ProjectsList />
