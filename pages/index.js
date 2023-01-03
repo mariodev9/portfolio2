@@ -49,7 +49,7 @@ export default function Index() {
           }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ x: 2000 }}
+          exit={{ y: 2000 }}
           transition={{
             duration: 0.75,
             ease: "easeInOut",

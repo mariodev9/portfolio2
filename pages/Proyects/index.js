@@ -27,7 +27,7 @@ export default function Proyects() {
       }}
       initial={{ y: "100%" }}
       animate={{ y: "0%" }}
-      exit={{ x: 2000 }}
+      exit={{ y: 2000 }}
       transition={{
         duration: 0.75,
         ease: "easeInOut",
