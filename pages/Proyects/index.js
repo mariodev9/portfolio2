@@ -35,13 +35,12 @@ export default function Proyects() {
     >
       <Box p={{ base: "20vh 40px", tablet: "25vh 120px" }}>
         <motion.div>
-          <Text variant={"title"} fontSize={{ base: "55px", tablet: "80px" }}>
+          <Text variant={"title"} fontSize={{ base: "50px", tablet: "80px" }}>
             Proyectos
           </Text>
         </motion.div>
 
         <ProjectsList />
-
         <OtherProjects />
       </Box>
     </motion.div>

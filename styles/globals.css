@@ -71,7 +71,8 @@ body{
   .button-82-front {
     display: block;
     position: relative;
-    padding: 12px 27px;
+    padding: 12px 42px;
+
     border-radius: 12px;
     font-size: 1.1rem;
     color: black;
@@ -88,7 +89,6 @@ body{
   @media (min-width: 768px) {
     .button-82-front {
       font-size: 1.25rem;
-      padding: 12px 42px;
     }
   }
   

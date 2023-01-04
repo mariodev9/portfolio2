@@ -29,7 +29,7 @@ export default function OtherProjects() {
       <Text fontSize={"25px"}>Otros Proyectos</Text>
       <Wrap mt="50px" py="10px">
         {list.map((item, index) => (
-          <WrapItem key={item.name}>
+          <WrapItem key={item.name} pb="15px">
             <Flex
               w="200px"
               h="150px"

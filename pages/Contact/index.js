@@ -16,6 +16,7 @@ import React from "react";
 import { GithubIcon, LinkedinIcon } from "../../components/Icons";
 import { chakra } from "@chakra-ui/react";
 import PrimaryButton from "../../components/Common/PrimaryButton";
+import Link from "next/link";
 
 export default function ContactPage() {
   const MotionButton = chakra(motion.button, {
@@ -59,35 +60,25 @@ export default function ContactPage() {
           </Text>
         </Flex>
         <Flex justify={"center"} mt="50px">
-          {/* <Button
-            layerStyle={"whiteBox"}
-            fontWeight={600}
-            w="220px"
-            fontSize="20px"
-            p="25px "
-          >
-            Hablemos
-          </Button> */}
-          {/* <MotionButton
-            layerStyle={"whiteBox"}
-            fontWeight={600}
-            w="220px"
-            fontSize="20px"
-            p="25px "
-            whileHover={{ scale: 0.9 }}
-          >
-            Hablemos
-          </MotionButton> */}
-          <PrimaryButton width={"220px"}>Hablemos</PrimaryButton>
+          <Link href={"mailto:luciano.mariotti99@gmail.com"}>
+            <PrimaryButton width={"220px"}>Hablemos</PrimaryButton>
+          </Link>
         </Flex>
         <Box p="20px 0px">
           <Flex justify={"center"} gap="10px">
-            <PrimaryButton>
-              <GithubIcon />
-            </PrimaryButton>
-            <PrimaryButton>
-              <LinkedinIcon />
-            </PrimaryButton>
+            <Link href={"https://github.com/mariodev9/"} target={"_blank"}>
+              <PrimaryButton>
+                <GithubIcon />
+              </PrimaryButton>
+            </Link>
+            <Link
+              href={"https://www.linkedin.com/in/luciano-mariotti/"}
+              target={"_blank"}
+            >
+              <PrimaryButton>
+                <LinkedinIcon />
+              </PrimaryButton>
+            </Link>
           </Flex>
         </Box>
       </Flex>

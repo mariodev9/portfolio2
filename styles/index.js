@@ -38,8 +38,9 @@ export const theme = extendTheme({
     skill: {
       p: "12px 27px",
       borderRadius: "12px",
-      color: "black",
-      bgColor: "#FFFFFF",
+      color: "#fff",
+      bgColor: "#222222",
+      boxShadow: "0px 5px #383838",
     },
     whiteBox: {
       boxShadow: "0px 5px 4px #00000012",

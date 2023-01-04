@@ -59,6 +59,7 @@ export default function Tecnologies() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
+          p="15px 0px"
         >
           {tecnologiesList.map((item) => (
             <motion.div variants={skill} key={item}>
