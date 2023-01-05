@@ -19,6 +19,35 @@ import { useEffect } from "react";
 import PrimaryButton from "../../Common/PrimaryButton";
 import { LogoIcon, Menu } from "../../Icons";
 
+const list = {
+  hidden: { opacity: 0.1 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const text = {
+  hidden: {
+    opacity: 0,
+    x: -200,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      duration: 1.6,
+    },
+  },
+  exit: {
+    opacity: 0,
+    x: -200,
+  },
+};
+
 const navbarVariants = {
   visible: {
     opacity: 1,
@@ -54,6 +83,9 @@ const MobileNav = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
 
+  const StackMotion = motion(VStack);
+  const MotionBox = motion(Box);
+
   return (
     <>
       <Flex justify={"space-between"} align={"center"} py="10px" px="40px">
@@ -78,15 +110,25 @@ const MobileNav = () => {
         <DrawerContent bg={"#FFF7F0"}>
           <DrawerCloseButton />
           <DrawerBody display={"flex"} justifyContent={"center"}>
-            <VStack spacing={10} justify={"center"}>
+            <StackMotion
+              spacing={10}
+              justify={"center"}
+              variants={list}
+              initial="hidden"
+              whileInView="show"
+            >
               {NAV_ITEMS.map((navItem) => (
-                <Box key={navItem.title} onClick={onClose}>
+                <MotionBox
+                  key={navItem.title}
+                  onClick={onClose}
+                  variants={text}
+                >
                   <Text variant={"title"} fontSize={"42px"}>
                     <Link href={navItem.url}>{navItem.title}</Link>
                   </Text>
-                </Box>
+                </MotionBox>
               ))}
-            </VStack>
+            </StackMotion>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
@@ -96,15 +138,15 @@ const MobileNav = () => {
 
 const NAV_ITEMS = [
   {
-    title: "SOBRE MI",
+    title: "Sobre mi",
     url: "/About",
   },
   {
-    title: "PROYECTOS",
+    title: "Proyectos",
     url: "/Proyects",
   },
   {
-    title: "CONTACTO",
+    title: "Contacto",
     url: "/Contact",
   },
 ];
