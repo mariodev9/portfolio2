@@ -15,7 +15,6 @@ export default function Interfaces() {
           <Image
             src={"images/codepartyScreen1.jpg"}
             alt="project screen"
-            h="150px"
             borderRadius={"15px"}
           />
         </Flex>
