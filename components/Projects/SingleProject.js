@@ -11,6 +11,19 @@ import { CodepartyIcon, GithubIcon, SiteIcon } from "../Icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+const proyectAnimation = {
+  hidden: {
+    y: -100,
+  },
+  show: {
+    y: 0,
+    transition: {
+      type: "spring",
+      duration: 1,
+    },
+  },
+};
+
 export default function SingleProject({
   name,
   pos,
@@ -51,7 +64,6 @@ export default function SingleProject({
           style={{ position: "absolute" }}
         >
           <Flex gap="10">
-            {/* agregar que si bg === #272727 se ponga blanco los icons */}
             <Link href={urlGithub} target="_blank">
               <GithubIcon
                 stroke={backgroundColor === "#272727" ? "#fff" : "#151515"}

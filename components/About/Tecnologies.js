@@ -50,7 +50,7 @@ const skill = {
 export default function Tecnologies() {
   return (
     <>
-      <Box m="20vh 0px">
+      <Box m="10vh 0px">
         <Text fontSize={"30px"}>Tecnologias</Text>
         <MotionWrap
           mt="40px"

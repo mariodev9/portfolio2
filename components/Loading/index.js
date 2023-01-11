@@ -14,9 +14,20 @@ export const LogoLoader = (props) => {
         {/* SOMBRA */}
         <motion.rect
           initial={{ opacity: 0, scale: 2.7, y: 0 }}
-          animate={{ opacity: 1, scale: 1, y: 3 }}
+          animate={{ opacity: 1, scale: 1, y: 5 }}
           transition={{
-            duration: 2,
+            default: {
+              duration: 5,
+              ease: [0, 0.1, 0.5, 0.8],
+              type: "spring",
+            },
+            y: {
+              delay: 1.7,
+              type: "spring",
+              damping: 2.5,
+              stiffness: 80,
+              restDelta: 1,
+            },
           }}
           x="50"
           y="53"

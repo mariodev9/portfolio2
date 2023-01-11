@@ -54,16 +54,17 @@ export default function Index() {
               Hola, mi nombre es Luciano Mariotti.
             </Text>
             <Text fontSize={"20px"}>
-              Soy un programador web con gran afán por el diseño, resolver cosas
-              interesantes, planear y concebir ideas creativas en el código. Me
-              considero una persona curiosa por el mundo del desarollo web y
-              trabajo dia a dia para mejorar mis habilidades.
+              Soy un desarrollador Front End con gran afán por el diseño,
+              resolver problemas interesantes y concebir ideas en el código
+              creando interfaces divertidas. Me considero una persona curiosa,
+              creativa y original que trabaja día a día para mejorar mis
+              habilidades.
             </Text>
           </motion.div>
         </Flex>
 
-        <Tecnologies />
         <Interfaces />
+        <Tecnologies />
       </Box>
     </motion.div>
   );

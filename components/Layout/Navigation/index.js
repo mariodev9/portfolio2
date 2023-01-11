@@ -70,8 +70,6 @@ export default function Navigation() {
         position: "absolute",
         zIndex: 3,
         width: "100%",
-        background: "rgba( 255, 255, 255, 0 )",
-        backdropFilter: "blur( 7px )",
       }}
     >
       <MobileNav />

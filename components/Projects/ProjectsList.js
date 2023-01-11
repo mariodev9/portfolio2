@@ -2,6 +2,8 @@ import { Flex, Box, Text, Image, Grid } from "@chakra-ui/react";
 import React from "react";
 import { BitstoreIcon, CodepartyIcon, FlashcardsIcon } from "../Icons";
 import SingleProject from "./SingleProject";
+import { motion } from "framer-motion";
+import FeatureProject from "./FeatureProject";
 
 const list = [
   {
@@ -48,6 +50,7 @@ export default function ProjectsList() {
           />
         ))}
       </Grid>
+      <FeatureProject />
     </Box>
   );
 }

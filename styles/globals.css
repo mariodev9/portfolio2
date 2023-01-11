@@ -1,18 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,900;1,900&display=swap');
 
-@font-face {
-    font-family: "Guttie";
-    src: url('../fonts/guttie/Guttie.otf');
-    font-weight: normal;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: "Segoe Print";
-    src: url('../fonts/segoe/segoepr.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
 
 body{ 
     font-family: 'Poppins', sans-serif!important;
