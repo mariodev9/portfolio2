@@ -54,6 +54,7 @@ export default function FeatureProject({
               <HStack spacing={10} mt="10px">
                 {tecnologies.map((item) => (
                   <Text
+                    key={item}
                     fontWeight={"light"}
                     fontSize={{ base: "12px", desktop: "18px" }}
                   >
