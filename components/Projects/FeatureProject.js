@@ -7,52 +7,54 @@ import Link from "next/link";
 export default function FeatureProject({
   name,
   pos,
+  description,
   icon,
-  backgroundColor,
   urlGithub,
   urlSite,
 }) {
+  const invert = pos % 2 === 0;
+
   return (
-    <motion.div>
-      <Flex>
-        <Flex
-          w={"40%"}
-          h={"300px"}
-          layerStyle={"whiteBox"}
-          justify={"center"}
-          align={"center"}
-        >
-          <BitstoreIcon />
-        </Flex>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+    >
+      <Flex m="40px 0px" align={"center"}>
         <Flex
           w={"50%"}
           direction={"column"}
           justify={"space-around"}
-          pos={"relative"}
-          right={"0"}
+          align={invert ? "start" : "end"}
+          order={invert ? 1 : 2}
         >
-          {/* Si es par o impar end o start */}
-          <Text textAlign={"end"} fontSize={"4xl"}>
-            Codeparty
+          <Text textAlign={"start"} fontSize={"4xl"}>
+            {name}
           </Text>
           <Box
-            pos={"relative"}
             w={"120%"}
-            right="20%"
             p={"25px 40px"}
             borderRadius={"15px"}
             bg={"#272727"}
+            zIndex={99}
           >
-            <Text color={"#fff"} fontWeight={"medium"} fontSize={"18px"}>
-              Tienda de camisetas basado en 8bitfootball. Mira las ultimas
-              camisetas del momento de una forma divertida y elegí tus
-              favoritas!
+            <Text
+              color={"#fff"}
+              fontWeight={"medium"}
+              fontSize={{ base: "12px", desktop: "18px" }}
+            >
+              {description}
             </Text>
           </Box>
-          <Flex justify={"end"} w={"100%"}>
+
+          <Flex justify={invert ? "start" : "end"} w={"100%"}>
             <Box>
-              <Text fontWeight={"medium"}> Next.js Firebase</Text>
-              <HStack justify={"end"} mt="15px" spacing={4}>
+              <Text mt={"5px"} fontWeight={"medium"}>
+                Next.js Firebase
+              </Text>
+
+              <HStack justify={invert ? "start" : "end"} mt="15px" spacing={4}>
                 <GithubIcon></GithubIcon>
                 <SiteIcon></SiteIcon>
                 {/* <Link href={urlGithub} target="_blank">
@@ -68,6 +70,18 @@ export default function FeatureProject({
               </HStack>
             </Box>
           </Flex>
+        </Flex>
+        <Flex
+          w={"50%"}
+          h={{ base: "200px", tablet: "250px", desktop: "300px" }}
+          layerStyle={"whiteBox"}
+          justify={"center"}
+          align={"center"}
+          pos={"relative"}
+          right={"0"}
+          order={invert ? 2 : 1}
+        >
+          {icon}
         </Flex>
       </Flex>
     </motion.div>

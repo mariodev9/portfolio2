@@ -38,13 +38,7 @@ export default function SingleProject({
   const MotionFlex = motion(Flex);
 
   return (
-    <GridItem
-      alignSelf={
-        pos === 1
-          ? { base: "start", desktop: "center" }
-          : pos === 2 && { base: "start", desktop: "end" }
-      }
-    >
+    <Box>
       <MotionFlex
         justify={"center"}
         align="center"
@@ -99,6 +93,6 @@ export default function SingleProject({
       >
         <Text color="white">{pos + 1}</Text>
       </Flex>
-    </GridItem>
+    </Box>
   );
 }

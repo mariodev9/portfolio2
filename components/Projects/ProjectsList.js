@@ -1,4 +1,12 @@
-import { Flex, Box, Text, Image, Grid } from "@chakra-ui/react";
+import {
+  Flex,
+  Box,
+  Text,
+  Image,
+  Grid,
+  useMediaQuery,
+  VStack,
+} from "@chakra-ui/react";
 import React from "react";
 import { BitstoreIcon, CodepartyIcon, FlashcardsIcon } from "../Icons";
 import SingleProject from "./SingleProject";
@@ -12,13 +20,8 @@ const list = [
     backgroundColor: "#272727",
     urlGithub: "https://github.com/mariodev9/CodepartyV2",
     urlSite: "https://codeparty-v2.vercel.app/Home",
-  },
-  {
-    name: "Flashcards",
-    icon: <FlashcardsIcon />,
-    backgroundColor: "#fff",
-    urlGithub: "https://github.com/frontendcafe/air-flashcards",
-    urlSite: "",
+    description:
+      "Red social donde puedes conectarte con otros desarrolladores! Puedes crear tu perfil incluyendo tu stack de tecnologias de una forma divertida, compartir, interactuar y comentar publicaciones.",
   },
   {
     name: "8bitstore",
@@ -26,31 +29,50 @@ const list = [
     backgroundColor: "#fff",
     urlGithub: "https://github.com/mariodev9/8bitStore",
     urlSite: "https://8bit-store.vercel.app/",
+    description:
+      "Tienda de camisetas basado en 8bitfootball. Mira las ultimas camisetas del momento de una forma divertida y elegí tus favoritas!",
+  },
+  {
+    name: "Flashcards",
+    icon: <FlashcardsIcon />,
+    backgroundColor: "#fff",
+    urlGithub: "https://github.com/frontendcafe/air-flashcards",
+    urlSite: "",
+    description:
+      "Tienda de camisetas basado en 8bitfootball. Mira las ultimas camisetas del momento de una forma divertida y elegí tus favoritas!",
   },
 ];
 
 export default function ProjectsList() {
+  const [isLargerThan750] = useMediaQuery("(max-width: 750px)");
+
   return (
-    <Box>
-      <Grid
-        p="40px 0px"
-        templateColumns={{ base: "repeat(1, 1fr)", desktop: "repeat(3, 1fr)" }}
-        gap={6}
-        h={{ base: "auto", desktop: "500px" }}
-      >
-        {list.map((item, index) => (
-          <SingleProject
-            key={item.name}
-            name={item.name}
-            pos={index}
-            icon={item.icon}
-            backgroundColor={item.backgroundColor}
-            urlGithub={item.urlGithub}
-            urlSite={item.urlSite}
-          />
-        ))}
-      </Grid>
-      <FeatureProject />
-    </Box>
+    <VStack spacing={5} mt={"10px"}>
+      {isLargerThan750
+        ? list.map((item, index) => (
+            <SingleProject
+              key={item.name}
+              name={item.name}
+              pos={index}
+              description={item.description}
+              icon={item.icon}
+              backgroundColor={item.backgroundColor}
+              urlGithub={item.urlGithub}
+              urlSite={item.urlSite}
+            />
+          ))
+        : list.map((item, index) => (
+            <FeatureProject
+              key={item.name}
+              name={item.name}
+              pos={index}
+              icon={item.icon}
+              backgroundColor={item.backgroundColor}
+              urlGithub={item.urlGithub}
+              urlSite={item.urlSite}
+              description={item.description}
+            />
+          ))}
+    </VStack>
   );
 }
