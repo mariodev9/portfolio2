@@ -11,9 +11,6 @@ export default function Interfaces() {
         transition={{ duration: 1 }}
         viewport={{ once: false }}
       >
-        {/* <Text align={"center"} fontSize={"20px"} mb="30px">
-        Ademas de desarrollar, disfruto de crear interfaces divertidas
-      </Text> */}
         <Flex>
           <Flex align={"center"} w="20%">
             <Image

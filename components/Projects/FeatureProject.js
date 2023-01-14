@@ -8,6 +8,7 @@ export default function FeatureProject({
   name,
   pos,
   description,
+  tecnologies,
   icon,
   urlGithub,
   urlSite,
@@ -50,23 +51,24 @@ export default function FeatureProject({
 
           <Flex justify={invert ? "start" : "end"} w={"100%"}>
             <Box>
-              <Text mt={"5px"} fontWeight={"medium"}>
-                Next.js Firebase
-              </Text>
+              <HStack spacing={10} mt="10px">
+                {tecnologies.map((item) => (
+                  <Text
+                    fontWeight={"light"}
+                    fontSize={{ base: "12px", desktop: "18px" }}
+                  >
+                    {item}
+                  </Text>
+                ))}
+              </HStack>
 
               <HStack justify={invert ? "start" : "end"} mt="15px" spacing={4}>
-                <GithubIcon></GithubIcon>
-                <SiteIcon></SiteIcon>
-                {/* <Link href={urlGithub} target="_blank">
-                  <GithubIcon
-                    stroke={backgroundColor === "#272727" ? "#fff" : "#151515"}
-                  />
+                <Link href={urlGithub} target="_blank">
+                  <GithubIcon />
                 </Link>
                 <Link href={urlSite} target="_blank">
-                  <SiteIcon
-                    stroke={backgroundColor === "#272727" ? "#fff" : "#151515"}
-                  />
-                </Link> */}
+                  <SiteIcon />
+                </Link>
               </HStack>
             </Box>
           </Flex>

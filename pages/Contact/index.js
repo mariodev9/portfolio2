@@ -61,11 +61,11 @@ export default function ContactPage() {
         </Flex>
         <Flex justify={"center"} mt="50px">
           <Link href={"mailto:luciano.mariotti99@gmail.com"}>
-            <PrimaryButton width={"220px"}>Hablemos</PrimaryButton>
+            <PrimaryButton width={"230px"}>Hablemos</PrimaryButton>
           </Link>
         </Flex>
         <Box p="20px 0px">
-          <Flex justify={"center"} gap="10px">
+          <Flex justify={"center"} gap="5px">
             <Link href={"https://github.com/mariodev9/"} target={"_blank"}>
               <PrimaryButton>
                 <GithubIcon />

@@ -57,7 +57,7 @@ export default function Index() {
               Soy un desarrollador Front End con gran afán por el diseño,
               resolver problemas interesantes y concebir ideas en el código
               creando interfaces divertidas. Me considero una persona curiosa,
-              creativa y original que trabaja día a día para mejorar mis
+              creativa y original que trabaja día a día para mejorar sus
               habilidades.
             </Text>
           </motion.div>

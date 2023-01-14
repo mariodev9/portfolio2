@@ -45,7 +45,7 @@ export default function SingleProject({
         borderRadius="15px"
         h="200px"
         w="250px"
-        bg={backgroundColor}
+        bg="#fff"
         boxShadow="0px 5px 4px #00000012"
         cursor="pointer"
         onMouseEnter={() => !isLargerThan900 && setHovered(true)}
@@ -59,14 +59,10 @@ export default function SingleProject({
         >
           <Flex gap="10">
             <Link href={urlGithub} target="_blank">
-              <GithubIcon
-                stroke={backgroundColor === "#272727" ? "#fff" : "#151515"}
-              />
+              <GithubIcon />
             </Link>
             <Link href={urlSite} target="_blank">
-              <SiteIcon
-                stroke={backgroundColor === "#272727" ? "#fff" : "#151515"}
-              />
+              <SiteIcon />
             </Link>
           </Flex>
         </motion.div>

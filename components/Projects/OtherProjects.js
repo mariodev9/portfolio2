@@ -25,7 +25,7 @@ const list = [
 
 export default function OtherProjects() {
   return (
-    <Box>
+    <Box mt={"50px"}>
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +40,7 @@ export default function OtherProjects() {
         transition={{ duration: 0.5, delay: 0.5 }}
         viewport={{ once: true }}
       >
-        <Wrap mt="50px" py="10px">
+        <Wrap mt="20px" py="10px">
           {list.map((item, index) => (
             <WrapItem key={item.name} pb="15px">
               <Flex

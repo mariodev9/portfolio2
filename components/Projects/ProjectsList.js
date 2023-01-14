@@ -18,6 +18,7 @@ const list = [
     name: "Codeparty",
     icon: <CodepartyIcon />,
     backgroundColor: "#272727",
+    tecnologies: ["Next.js, Firebase"],
     urlGithub: "https://github.com/mariodev9/CodepartyV2",
     urlSite: "https://codeparty-v2.vercel.app/Home",
     description:
@@ -27,6 +28,7 @@ const list = [
     name: "8bitstore",
     icon: <BitstoreIcon />,
     backgroundColor: "#fff",
+    tecnologies: ["Next.js, Framer-motion, Firebase, Chakra UI"],
     urlGithub: "https://github.com/mariodev9/8bitStore",
     urlSite: "https://8bit-store.vercel.app/",
     description:
@@ -36,10 +38,11 @@ const list = [
     name: "Flashcards",
     icon: <FlashcardsIcon />,
     backgroundColor: "#fff",
+    tecnologies: ["Next.js, Typescript, Firebase, Chakra UI"],
     urlGithub: "https://github.com/frontendcafe/air-flashcards",
     urlSite: "",
     description:
-      "Tienda de camisetas basado en 8bitfootball. Mira las ultimas camisetas del momento de una forma divertida y elegí tus favoritas!",
+      "Esta aplicación resuelve un problema de estudio mediante la creación de colecciones de cartas. A su vez estas cartas te ayudaran a aprender conceptos para facilitar el proceso de aprendizaje",
   },
 ];
 
@@ -56,7 +59,6 @@ export default function ProjectsList() {
               pos={index}
               description={item.description}
               icon={item.icon}
-              backgroundColor={item.backgroundColor}
               urlGithub={item.urlGithub}
               urlSite={item.urlSite}
             />
@@ -71,6 +73,7 @@ export default function ProjectsList() {
               urlGithub={item.urlGithub}
               urlSite={item.urlSite}
               description={item.description}
+              tecnologies={item.tecnologies}
             />
           ))}
     </VStack>
