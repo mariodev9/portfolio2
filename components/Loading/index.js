@@ -91,9 +91,9 @@ export default function Loading({ isVisible }) {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ scale: 1, opacity: 1 }}
-          animate={{ scale: 0, opacity: 0 }}
-          transition={{ delay: 4.5 }}
+          initial={{ y: 0, opacity: 1 }}
+          animate={{ y: -100, opacity: 0 }}
+          transition={{ delay: 4.5, duration: 1, type: "spring" }}
         >
           <Flex
             position={"absolute"}

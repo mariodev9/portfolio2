@@ -3,7 +3,6 @@ import { Text, Box, Flex, Wrap } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 const tecnologiesList = [
-  "HTML",
   "CSS",
   "Javascript",
   "React.js",
