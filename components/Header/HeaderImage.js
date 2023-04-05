@@ -191,7 +191,7 @@ export const HeaderImage = (props) => {
             id="image0_53_78"
             width="3024"
             height="4032"
-            xlinkHref="https://firebasestorage.googleapis.com/v0/b/codepartyv2.appspot.com/o/IMG_168.png?alt=media&token=7c326048-8d9f-4666-80bc-381dc5f5c5c9"
+            xlinkHref="https://firebasestorage.googleapis.com/v0/b/portfolio-bef3a.appspot.com/o/portfolioimg.jpg?alt=media&token=9f5bcb7e-2d07-4422-b4b1-7dd39c16bbd4"
           ></image>
         </defs>
       </Icon>
