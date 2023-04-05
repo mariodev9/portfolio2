@@ -67,9 +67,11 @@ export default function FeatureProject({
                 <Link href={urlGithub} target="_blank">
                   <GithubIcon />
                 </Link>
-                <Link href={urlSite} target="_blank">
-                  <SiteIcon />
-                </Link>
+                {urlSite && (
+                  <Link href={urlSite} target="_blank">
+                    <SiteIcon />
+                  </Link>
+                )}
               </HStack>
             </Box>
           </Flex>

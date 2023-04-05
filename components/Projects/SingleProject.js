@@ -61,9 +61,12 @@ export default function SingleProject({
             <Link href={urlGithub} target="_blank">
               <GithubIcon />
             </Link>
-            <Link href={urlSite} target="_blank">
-              <SiteIcon />
-            </Link>
+
+            {urlSite && (
+              <Link href={urlSite} target="_blank">
+                <SiteIcon />
+              </Link>
+            )}
           </Flex>
         </motion.div>
         <motion.div
