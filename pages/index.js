@@ -66,6 +66,7 @@ export default function Index() {
               animate="visible"
               style={{
                 padding: "0px 30px",
+                order: 2,
               }}
             >
               <Text textAlign={{ base: "center", tablet: "initial" }}>
@@ -94,6 +95,7 @@ export default function Index() {
               align="center"
               justify={"center"}
             >
+              {/* Rotate Icon */}
               <Box
                 pos={"absolute"}
                 top={{ base: "20vh", tablet: "90px" }}
@@ -107,6 +109,7 @@ export default function Index() {
                   <RotateIcon />
                 </motion.div>
               </Box>
+              {/* Header Image */}
               <Box display={{ base: "none", tablet: "flex" }}>
                 <HeaderImage />
               </Box>
