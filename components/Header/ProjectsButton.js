@@ -3,6 +3,7 @@ import { Flex, Box, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { ArrowIcon } from "../Icons";
 import { useRouter } from "next/router";
+import PrimaryButton from "../Common/PrimaryButton";
 
 export default function ProjectsButton() {
   const [isHovered, setHovered] = useState(false);
@@ -25,7 +26,9 @@ export default function ProjectsButton() {
           alignItems: "center",
         }}
       >
-        <ArrowIcon isHovered={isHovered} />
+        <PrimaryButton padding={"15px 20px"}>
+          <ArrowIcon isHovered={isHovered} />
+        </PrimaryButton>
         <Box p="0px 20px" fontSize={"22px"}>
           <Text textTransform={"uppercase"}>Ver </Text>
           <Text textTransform={"uppercase"}> Proyectos</Text>
