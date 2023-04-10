@@ -1,17 +1,12 @@
 import { useEffect, useState } from "react";
-import { Box, Text, Flex, Divider, Stack } from "@chakra-ui/react";
-import { HeaderImage } from "../components/Header/HeaderImage";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  ArrowIcon,
-  GithubIcon,
-  LinkedinIcon,
-  RotateIcon,
-} from "../components/Icons";
 import { useRouter } from "next/router";
-import Link from "next/link";
-import ProjectsButton from "../components/Header/ProjectsButton";
+import { Box, Text, Flex } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import { RotateIcon } from "../components/Icons";
 import Loading from "../components/Loading";
+// header components
+import ProjectsButton from "../components/Header/ProjectsButton";
+import { HeaderImage } from "../components/Header/HeaderImage";
 import SocialMedia from "../components/Header/SocialMedia";
 
 const headerVariants = {

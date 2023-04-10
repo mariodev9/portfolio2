@@ -1,29 +1,11 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  shouldForwardProp,
-  Text,
-} from "@chakra-ui/react";
-import {
-  isValidMotionProp,
-  motion,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { Box, Flex, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import React from "react";
-import { GithubIcon, LinkedinIcon } from "../../components/Icons";
-import { chakra } from "@chakra-ui/react";
+import { GithubIcon, LinkedinIcon, SiteIcon } from "../../components/Icons";
 import PrimaryButton from "../../components/Common/PrimaryButton";
 import Link from "next/link";
 
 export default function ContactPage() {
-  const MotionButton = chakra(motion.button, {
-    shouldForwardProp: (prop) =>
-      isValidMotionProp(prop) || shouldForwardProp(prop),
-  });
-
   return (
     <motion.div
       style={{
@@ -47,7 +29,7 @@ export default function ContactPage() {
       >
         <Text
           textAlign={"center"}
-          pb="40px"
+          pb="30px"
           variant={"title"}
           fontSize={{ base: "55px", tablet: "80px" }}
         >
@@ -59,7 +41,7 @@ export default function ContactPage() {
             que quieras hacerme. <br></br>Te responderé lo mas rápido posible!
           </Text>
         </Flex>
-        <Flex justify={"center"} mt="50px">
+        <Flex justify={"center"} mt="30px">
           <Link href={"mailto:luciano.mariotti99@gmail.com"}>
             <PrimaryButton width={"230px"}>Hablemos</PrimaryButton>
           </Link>
@@ -81,6 +63,20 @@ export default function ContactPage() {
             </Link>
           </Flex>
         </Box>
+        <Flex justify={"center"}>
+          <Link
+            href="/files/Luciano_Mariotti_CV.pdf"
+            alt="download resume"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <PrimaryButton width={"230px"} backgroundColor={"#10101A"}>
+              <Flex gap={"20px"}>
+                <Text color={"#fff"}>Resumen</Text> <SiteIcon stroke={"#fff"} />
+              </Flex>
+            </PrimaryButton>
+          </Link>
+        </Flex>
       </Flex>
     </motion.div>
   );
