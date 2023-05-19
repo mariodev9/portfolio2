@@ -51,9 +51,11 @@ export default function Index() {
           }}
         >
           <Flex
+            h={"100vh"}
             direction={{ base: "column", tablet: "row" }}
             p={{ base: "25vh 10px", tablet: "20vh 120px" }}
             justify={"center"}
+            align={"center"}
           >
             <motion.div
               variants={headerVariants}
